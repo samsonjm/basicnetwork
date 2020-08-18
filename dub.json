@@ -1,0 +1,16 @@
+{
+	"authors": [
+		"Jonathan Samson"
+	],
+	"copyright": "Copyright © 2020, Jonathan Samson",
+	"description": "An application for creating a basic molecular network based on cosine scores.",
+	"license": "GPL3",
+	"name": "basicnetwork",
+	"dependencies": {
+		"mscosine" : "MSCosineDefaultLibrary",
+		"mscosine": {
+			"version": "MSCosineDefaultLibrary",
+			"path": "../mscosine"
+		}
+	}
+}

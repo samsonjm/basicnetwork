@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/basicnetwork
+basicnetwork.so
+basicnetwork.dylib
+basicnetwork.dll
+basicnetwork.a
+basicnetwork.lib
+basicnetwork-test-*
+*.exe
+*.o
+*.obj
+*.lst
