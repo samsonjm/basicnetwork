@@ -13,3 +13,4 @@ basicnetwork-test-*
 *.o
 *.obj
 *.lst
+*.SIF
