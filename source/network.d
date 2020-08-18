@@ -84,10 +84,25 @@ ConsensusScan[] generate_nodes(
 			ConsensusScan this_scan = new ConsensusScan;
 			this_scan.included_scans ~= scan;
 			this_scan.consensus_peaks = scan.peaks;
+			this_scan.peak_threshold = peak_threshold;
 			consensus_list ~= this_scan;
 		}
 	}
 	return consensus_list;
+}
+unittest
+{
+	MSXScan scan1 = new MSXScan;
+	MSXScan scan2 = new MSXScan;
+	MSXScan[] scans = [scan1, scan2];
+	real[real] peaks1 = [
+		100.1:	1000,
+		200.1:	10000,
+		300.1:	0,
+	];
+	scan1.peaks = peaks1;
+	scan2.peaks = peaks1;
+	assert(generate_nodes(scans, 0.1, 0.9).length == 1);
 }
 
 void generate_network_file(
